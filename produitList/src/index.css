@@ -1,2 +1,15 @@
 @import "tailwindcss";
 
+
+/* Déclaration de la police */
+@font-face {
+  font-family: 'Pencerio';
+  src: url('./police/Pencerio-Hairline.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Création de la classe Tailwind font-pencerio */
+@theme {
+  --font-pencerio: 'Pencerio', sans-serif;
+}

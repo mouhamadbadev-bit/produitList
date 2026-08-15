@@ -1,0 +1,98 @@
+
+
+
+
+ .produit {
+    grid-template-columns: repeat(3, 1Fr);
+    display: grid;
+   gap: 13px;
+   width: 600px;
+   margin: 30px;
+   
+
+ }
+ .carte {
+    border-radius: 20px solid black;
+    border: 8px;
+    padding-top: 0px; 
+   box-shadow: inset 2px 2px 12px  black;
+ }
+.carte.img{
+   justify-content: center;
+   align-items: center;
+  border-radius: 20px;
+}
+
+
+.img {
+   height: 120px;
+   width: 181px;
+   padding: 5px;
+   margin: 6px;
+ 
+}
+
+body {
+   background-color: moccasin;
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+.etoile {
+   display: flex;
+
+}
+
+/* 1. Définir l'animation d'apparition */
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* L'élément démarre un peu plus bas */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* L'élément arrive à sa position normale */
+  }
+}
+
+/* 2. Appliquer l'animation à toutes tes cartes */
+.carte {
+  opacity: 0; /* Invisible au départ */
+  animation: apparition 0.5s ease-out forwards; /* 'forwards' garde la carte visible */
+}
+
+@keyframes aiger {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* L'élément démarre un peu plus bas */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* L'élément arrive à sa position normale */
+  }
+}
+
+
+.panier {
+  opacity: 0; /* Invisible au départ */
+  animation: aiger 0.5s ease-out forwards;
+animation-delay: 1s;
+}
+
+.pani {
+  float: right;
+  margin-left: 100px;
+  margin-top: 175px;
+}
+
+/* 3. Définir le délai d'attente pour chaque carte */
+.carte:nth-child(1) { animation-delay: 1.5s; }
+.carte:nth-child(2) { animation-delay: 1.6s; }
+.carte:nth-child(3) { animation-delay: 1.7s; }
+.carte:nth-child(4) { animation-delay: 2s; }
+.carte:nth-child(5) { animation-delay: 1.9s; }
+.carte:nth-child(6) { animation-delay: 1.8s; }
+.carte:nth-child(7) { animation-delay: 2.1s; }
+.carte:nth-child(8) { animation-delay: 2.3s; }
+.carte:nth-child(9) { animation-delay: 2.4s; }
