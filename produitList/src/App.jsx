@@ -1,7 +1,20 @@
-import React, { useState } from "react";
 import produits from "./carte.jsx";
 import style from "./index.module.css";
+import { useState } from "react";
 
+
+
+
+//function de la portaille
+
+
+
+
+
+
+
+//function de la racine de l'App
+ 
 function APP() {
   // 1. State du panier
   const [panier, setPanier] = useState([]);
@@ -46,6 +59,7 @@ function APP() {
   return (
     <>
       <div className="p-4 flex flex-col md:flex-row gap-8">
+      
         {/* ===== SECTION PRODUITS ===== */}
         <div className={`${style.panier}`}>
           <h1 className="font-pencerio text-8xl pl-7 pt-7 font-bold hover:scale-105 transition-transform duration-300 antialiased">
@@ -87,7 +101,7 @@ function APP() {
                   
                   <button 
                     onClick={() => ajouterAuPanier(produit)}
-                    className="  p-1.5  rounded-full hover:bg-amber-100 hover:scale-110 transition-transform duration-300 cursor-pointer"
+                    className="  p-1.5 text-amber-900 rounded-full hover:bg-amber-100 hover:scale-110 transition-transform duration-300 cursor-pointer"
                     title="Ajouter au panier"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -100,17 +114,32 @@ function APP() {
           </div> 
         </div>
 
+        
+
         {/* ===== SECTION PANIER ===== */}
         <div className={`${style.panier}`}>
           <div className={`${style.pani}`}>
             <div className="w-full md:w-80 bg-white p-6 rounded-2xl shadow-md h-fit mt-10 hover:scale-105 transition-transform duration-300">
-              <h2 className="text-2xl font-bold text-red-800 mb-4 ">
+             <div className="flex items-center justify-between mb-4 ">
+ <h2 className="text-2xl font-bold text-red-800 mb-4 ">
                 Votre panier ({nombreArticles})
               </h2>
+              <button 
+                    onClick={viderPanier}
+                    className="pt-2 pb-6 py-2 rounded-xl hover:transition-colors hover:scale-105 duration-300 cursor-pointer"  >
+                    
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
 
-              {panier.length === 0 ? (
-                <p className="text-gray-500 text-center py-4">Votre panier est vide</p>
-              ) : (
+
+                  </button>
+
+             </div>
+
+              {panier.length === 0 ? ( 
+                   <p className="text-gray-500 text-center py-4">Votre panier est vide</p>
+                   ) : (
                 <>
                   <div className="flex flex-col gap-4">
                     {panier.map((produit) => (
@@ -142,13 +171,10 @@ function APP() {
                     <span>Total :</span>
                     <span>{totalPrix.toFixed(2)} $</span>
                   </div>
-
-                  <button 
-                    onClick={viderPanier}
-                    className="mt-4 w-full bg-red-600 text-white py-2 rounded-xl hover:bg-red-700 transition-colors hover:scale-105 duration-300 cursor-pointer"
-                  >
-                    Vider le panier
-                  </button>
+                <button className="ml-25 p-1.5 text-amber-600 border-2 rounded-2xl ">
+                  confirme
+                </button>
+              
                 </>
               )}
             </div>
