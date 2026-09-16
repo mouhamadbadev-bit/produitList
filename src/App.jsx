@@ -57,23 +57,23 @@ function APP() {
 
   return (
     <>
-      <div className="p-4  gap-8 max-w-7xl lg:flex lgjustify-between ">
+      <div className="p-4  gap-8 max-w-7xl lg:flex lg:justify-between ">
         
         {/* SECTION PRODUITS */}
         <div className={`${style.panier}   `}>
-          <h1 className="font-pencerio text-4xl sm:text-6xl md:text-8xl pl-2 sm:text-center pt-4 md:pt-7 font-bold hover:scale-105 transition-transform duration-300 antialiased">
+          <h1 className="font-pencerio text-4xl sm:text-6xl md:text-8xl pl-2 min-[320px]:text-center pt-4 md:pt-7 font-bold hover:scale-105 transition-transform duration-300 antialiased">
             Sweet Treats
           </h1>
 
-          <h2 className="font-pencerio text-xl sm:text-center sm:text-2xl md:text-4xl pl-2 md:pl-7 pt-2 font-bold hover:scale-105 transition-transform duration-300 antialiased">
+          <h2 className="font-pencerio text-xl min-[320px]:text-center sm:text-2xl md:text-4xl pl-2 md:pl-7 pt-2 font-bold hover:scale-105 transition-transform duration-300 antialiased">
             Delicate Dessert-curated collection
           </h2>
 
-          <div className={`${style.produit } grid  mt-4 min-[425px]:grid-cols-2 lg:grid-cols-3  sm:mx-auto  min[425px]:mx-auto`}>
+          <div className={`${style.produit } grid  mt-4  lg:grid-cols-3  sm:mx-auto  min[425px]:mx-auto`}>
             {produits.map((produit) => (
               <div
                 key={produit.id}
-                className={`${style.carte} hover:scale-105 transition-all duration-300 ease-in-out rounded-2xl antialiased bg-white/20`}
+                className={`${style.carte} hover:scale-105   transition-all duration-300 ease-in-out rounded-2xl antialiased bg-white/20`}
               >
                 <img
                   src={produit.image}

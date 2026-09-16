@@ -6,12 +6,12 @@ body {
 }
 
 .produit {
-   
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
    gap: 13px;
    width: 100%;
    max-width: 600px;
-   
-   
+   margin: 20px auto;
 }
 
 
@@ -26,10 +26,11 @@ body {
 }
 
 .img {
-   height: 170px;
+   height: 120px;
    width: 100%;
+   max-width: 181px;
    object-fit: cover;
-   padding: 7px;
+   padding: 5px;
    margin: 6px auto;
    display: block;
 }
