@@ -1,0 +1,90 @@
+body {
+   background-color: moccasin;
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+.produit {
+   
+   gap: 13px;
+   width: 100%;
+   max-width: 600px;
+   
+   
+}
+
+
+
+
+.carte {
+   border-radius: 20px;
+   padding-top: 0px; 
+   box-shadow: inset 2px 2px 12px black;
+   opacity: 0; 
+   animation: apparition 0.5s ease-out forwards;
+}
+
+.img {
+   height: 170px;
+   width: 100%;
+   object-fit: cover;
+   padding: 7px;
+   margin: 6px auto;
+   display: block;
+}
+
+.etoile {
+   display: flex;
+}
+
+.panier {
+  opacity: 0;
+  animation: aiger 0.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.pani {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .pani {
+    float: right;
+    margin-left: 50px;
+    margin-top: 175px;
+  }
+}
+
+/* Animations */
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aiger {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carte:nth-child(1) { animation-delay: 1.5s; }
+.carte:nth-child(2) { animation-delay: 1.6s; }
+.carte:nth-child(3) { animation-delay: 1.7s; }
+.carte:nth-child(4) { animation-delay: 2s; }
+.carte:nth-child(5) { animation-delay: 1.9s; }
+.carte:nth-child(6) { animation-delay: 1.8s; }
+.carte:nth-child(7) { animation-delay: 2.1s; }
+.carte:nth-child(8) { animation-delay: 2.3s; }
+.carte:nth-child(9) { animation-delay: 2.4s; }
